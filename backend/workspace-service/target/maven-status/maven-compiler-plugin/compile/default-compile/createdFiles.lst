@@ -1,0 +1,7 @@
+com\devconnect\workspace\model\Workspace.class
+com\devconnect\workspace\service\WorkspaceService.class
+com\devconnect\workspace\repository\WorkspaceRepository.class
+com\devconnect\workspace\controller\WorkspaceController.class
+com\devconnect\workspace\config\SecurityConfig.class
+com\devconnect\workspace\dto\WorkspaceDTO.class
+com\devconnect\workspace\WorkspaceServiceApplication.class

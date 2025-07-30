@@ -1,1 +1,0 @@
-Snapshot JPA entity

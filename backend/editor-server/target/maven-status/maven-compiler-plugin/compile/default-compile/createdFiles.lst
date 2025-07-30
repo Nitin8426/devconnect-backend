@@ -1,0 +1,6 @@
+com\devconnect\editor\controller\EditorController.class
+com\devconnect\editor\websocket\WebSocketConfig.class
+com\devconnect\editor\service\EditorService.class
+com\devconnect\editor\websocket\EditorWebSocketHandler.class
+com\devconnect\editor\EditorServiceApplication.class
+com\devconnect\editor\model\CRDTDocument.class

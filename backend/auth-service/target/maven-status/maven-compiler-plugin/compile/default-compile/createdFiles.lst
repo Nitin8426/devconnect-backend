@@ -1,0 +1,14 @@
+UserDTO.class
+com\devconnect\auth\dto\AuthResponse.class
+com\devconnect\auth\dto\RegisterRequest.class
+com\devconnect\auth\controller\AuthController.class
+com\devconnect\auth\model\User.class
+com\devconnect\auth\service\JwtService.class
+ResetRequest.class
+com\devconnect\auth\dto\LoginRequest.class
+com\devconnect\auth\service\PasswordResetService.class
+com\devconnect\auth\AuthServiceApplication.class
+com\devconnect\auth\payload\ResetRequest.class
+com\devconnect\auth\service\JwtFilter.class
+com\devconnect\auth\repository\UserRepository.class
+com\devconnect\auth\config\SecurityConfig.class

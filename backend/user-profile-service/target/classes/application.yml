@@ -1,0 +1,13 @@
+# File: src/main/resources/application.yml
+server:
+  port: 8089
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/devconnect_user
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

@@ -1,0 +1,14 @@
+com\devconnect\kanban\model\KanbanBoard$KanbanBoardBuilder.class
+com\devconnect\kanban\model\KanbanColumn.class
+com\devconnect\kanban\controller\KanbanController.class
+com\devconnect\kanban\repository\KanbanRepository.class
+com\devconnect\kanban\KanbanServiceApplication.class
+com\devconnect\kanban\config\WebConfig$1.class
+com\devconnect\kanban\config\WebConfig.class
+com\devconnect\kanban\dto\KanbanDTO.class
+com\devconnect\kanban\service\impl\KanbanServiceImpl.class
+com\devconnect\kanban\model\KanbanBoard.class
+com\devconnect\kanban\dto\KanbanDTO$KanbanDTOBuilder.class
+com\devconnect\kanban\repository\KanbanColumnRepository.class
+com\devconnect\kanban\dto\KanbanColumnDTO.class
+com\devconnect\kanban\service\KanbanService.class

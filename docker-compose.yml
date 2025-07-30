@@ -1,0 +1,186 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    environment:
+      POSTGRES_DB: devconnect
+      POSTGRES_USER: devuser
+      POSTGRES_PASSWORD: devpass
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
+
+  y-websocket:
+    build:
+      context: ./y-websocket
+    container_name: y-websocket
+    ports:
+      - "1234:1234"
+
+  frontend:
+    build:
+      context: ./frontend/devconnect-frontend
+    container_name: devconnect-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - auth-service
+
+  auth-service:
+    build:
+      context: ./backend/auth-service
+    container_name: auth-service
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/devconnect
+      SPRING_DATASOURCE_USERNAME: devuser
+      SPRING_DATASOURCE_PASSWORD: devpass
+    depends_on:
+      - postgres
+
+  chat-service:
+    build:
+      context: ./backend/chat-service
+    container_name: chat-service
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/devconnect
+      SPRING_DATASOURCE_USERNAME: devuser
+      SPRING_DATASOURCE_PASSWORD: devpass
+    depends_on:
+      - postgres
+
+  workspace-service:
+    build:
+      context: ./backend/workspace-service
+    container_name: workspace-service
+    ports:
+      - "8082:8082"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/devconnect
+      SPRING_DATASOURCE_USERNAME: devuser
+      SPRING_DATASOURCE_PASSWORD: devpass
+    depends_on:
+      - postgres
+
+  notification-service:
+    build:
+      context: ./backend/notification-service
+    container_name: notification-service
+    ports:
+      - "8083:8083"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/devconnect
+      SPRING_DATASOURCE_USERNAME: devuser
+      SPRING_DATASOURCE_PASSWORD: devpass
+    depends_on:
+      - postgres
+      - redis
+
+  kanban-service:
+    build:
+      context: ./backend/kanban-service
+    container_name: kanban-service
+    ports:
+      - "8084:8084"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/devconnect
+      SPRING_DATASOURCE_USERNAME: devuser
+      SPRING_DATASOURCE_PASSWORD: devpass
+    depends_on:
+      - postgres
+
+  ai-service:
+    build:
+      context: ./backend/ai-service
+    container_name: ai-service
+    ports:
+      - "8085:8085"
+    depends_on:
+      - redis
+
+  editor-service:
+    build:
+      context: ./backend/editor-service
+    container_name: editor-service
+    ports:
+      - "8086:8086"
+    depends_on:
+      - redis
+
+  issue-service:
+    build:
+      context: ./backend/issue-service
+    container_name: issue-service
+    ports:
+      - "8087:8087"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/devconnect
+      SPRING_DATASOURCE_USERNAME: devuser
+      SPRING_DATASOURCE_PASSWORD: devpass
+    depends_on:
+      - postgres
+
+  project-service:
+    build:
+      context: ./backend/project-service
+    container_name: project-service
+    ports:
+      - "8088:8088"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/devconnect
+      SPRING_DATASOURCE_USERNAME: devuser
+      SPRING_DATASOURCE_PASSWORD: devpass
+    depends_on:
+      - postgres
+
+  task-service:
+    build:
+      context: ./backend/task-service
+    container_name: task-service
+    ports:
+      - "8089:8089"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/devconnect
+      SPRING_DATASOURCE_USERNAME: devuser
+      SPRING_DATASOURCE_PASSWORD: devpass
+    depends_on:
+      - postgres
+
+  user-profile-service:
+    build:
+      context: ./backend/user-profile-service
+    container_name: user-profile-service
+    ports:
+      - "8090:8090"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/devconnect
+      SPRING_DATASOURCE_USERNAME: devuser
+      SPRING_DATASOURCE_PASSWORD: devpass
+    depends_on:
+      - postgres
+
+  collaboration-service:
+    build:
+      context: ./backend/collaboration-service
+    container_name: collaboration-service
+    ports:
+      - "8091:8091"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/devconnect
+      SPRING_DATASOURCE_USERNAME: devuser
+      SPRING_DATASOURCE_PASSWORD: devpass
+    depends_on:
+      - postgres
+
+volumes:
+  pg_data:

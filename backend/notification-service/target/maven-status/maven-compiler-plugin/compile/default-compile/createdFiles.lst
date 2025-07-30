@@ -1,0 +1,7 @@
+com\devconnect\notification\controller\NotificationController.class
+com\devconnect\notification\dto\NotificationDTO.class
+com\devconnect\notification\repository\NotificationRepository.class
+com\devconnect\notification\service\NotificationService.class
+com\devconnect\notification\config\KafkaConsumerConfig.class
+com\devconnect\notification\NotificationServiceApplication.class
+com\devconnect\notification\model\Notification.class

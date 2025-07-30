@@ -1,0 +1,14 @@
+C:\Users\vikas\Downloads\devconnect-backend\backend\auth-service\src\main\java\com\devconnect\auth\dto\RegisterRequest.java
+C:\Users\vikas\Downloads\devconnect-backend\backend\auth-service\src\main\java\com\devconnect\auth\payload\ResetRequest.java
+C:\Users\vikas\Downloads\devconnect-backend\backend\auth-service\src\main\java\com\devconnect\auth\dto\UserDTO.java
+C:\Users\vikas\Downloads\devconnect-backend\backend\auth-service\src\main\java\com\devconnect\auth\dto\AuthResponse.java
+C:\Users\vikas\Downloads\devconnect-backend\backend\auth-service\src\main\java\com\devconnect\auth\dto\AuthServiceApplication.java
+C:\Users\vikas\Downloads\devconnect-backend\backend\auth-service\src\main\java\com\devconnect\auth\service\JwtFilter.java
+C:\Users\vikas\Downloads\devconnect-backend\backend\auth-service\src\main\java\com\devconnect\auth\dto\LoginRequest.java
+C:\Users\vikas\Downloads\devconnect-backend\backend\auth-service\src\main\java\com\devconnect\auth\service\JwtService.java
+C:\Users\vikas\Downloads\devconnect-backend\backend\auth-service\src\main\java\com\devconnect\auth\repository\UserRepository.java
+C:\Users\vikas\Downloads\devconnect-backend\backend\auth-service\src\main\java\com\devconnect\auth\controller\AuthController.java
+C:\Users\vikas\Downloads\devconnect-backend\backend\auth-service\src\main\java\com\devconnect\auth\dto\ResetRequest.java
+C:\Users\vikas\Downloads\devconnect-backend\backend\auth-service\src\main\java\com\devconnect\auth\model\User.java
+C:\Users\vikas\Downloads\devconnect-backend\backend\auth-service\src\main\java\com\devconnect\auth\config\SecurityConfig.java
+C:\Users\vikas\Downloads\devconnect-backend\backend\auth-service\src\main\java\com\devconnect\auth\service\PasswordResetService.java

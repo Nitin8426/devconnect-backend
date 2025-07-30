@@ -1,0 +1,10 @@
+com\devconnect\issue\config\SecurityConfig.class
+com\devconnect\issue\IssueServiceApplication.class
+com\devconnect\issue\controller\IssueController.class
+com\devconnect\issue\dto\CommentDTO.class
+com\devconnect\issue\service\IssueService.class
+com\devconnect\issue\dto\IssueDTO.class
+com\devconnect\issue\model\Issue.class
+com\devconnect\issue\repository\CommentRepository.class
+com\devconnect\issue\model\Comment.class
+com\devconnect\issue\repository\IssueRepository.class

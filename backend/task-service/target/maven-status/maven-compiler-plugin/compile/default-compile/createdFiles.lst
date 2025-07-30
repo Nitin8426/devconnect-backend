@@ -1,0 +1,11 @@
+com\devconnect\task\model\TaskEntity.class
+com\devconnect\task\service\TaskService.class
+com\devconnect\task\dto\TaskDTO$TaskDTOBuilder.class
+com\devconnect\task\model\Task$TaskBuilder.class
+com\devconnect\task\repository\TaskRepository.class
+com\devconnect\task\model\Task.class
+com\devconnect\task\controller\TaskController.class
+com\devconnect\task\service\TaskServiceImpl.class
+com\devconnect\task\config\WebConfig.class
+com\devconnect\task\dto\TaskDTO.class
+com\devconnect\task\TaskServiceApplication.class

@@ -1,0 +1,9 @@
+com\devconnect\user\config\WebConfig.class
+com\devconnect\user\dto\UserProfileDTO$UserProfileDTOBuilder.class
+com\devconnect\user\dto\UserProfileDTO.class
+com\devconnect\user\repository\UserProfileRepository.class
+com\devconnect\user\controller\UserProfileController.class
+com\devconnect\user\model\UserProfile$UserProfileBuilder.class
+com\devconnect\user\service\UserProfileServiceImpl.class
+com\devconnect\user\model\UserProfile.class
+com\devconnect\user\service\UserProfileService.class

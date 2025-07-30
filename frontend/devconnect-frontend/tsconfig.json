@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                          // Latest JS features
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],   // DOM and ES features
+    "allowJs": false,                            // Disallow .js files
+    "skipLibCheck": true,                        // Speeds up build
+    "esModuleInterop": true,                     // For import compatibility
+    "allowSyntheticDefaultImports": true,
+    "strict": true,                              // Enables all strict type checks
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",                          // Needed for Vite
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,                              // Vite handles bundling
+    "jsx": "react-jsx",                          // React 17+ JSX transform
+    "types": ["vite/client"]                     // Include Vite's types
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

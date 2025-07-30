@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/devconnect
+    username: user
+    password: pass
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 8083
+spring.application.name: issue-service

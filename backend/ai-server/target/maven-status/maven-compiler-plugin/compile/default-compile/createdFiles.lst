@@ -1,0 +1,5 @@
+com\devconnect\ai\controller\AiController.class
+com\devconnect\ai\dto\PromptRequest.class
+com\devconnect\ai\AiServiceApplication.class
+com\devconnect\ai\dto\PromptResponse.class
+com\devconnect\ai\service\AiService.class

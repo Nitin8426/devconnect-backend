@@ -1,0 +1,10 @@
+com\devconnect\project\dto\ProjectDTO$ProjectDTOBuilder.class
+com\devconnect\project\ProjectServiceApplication.class
+com\devconnect\project\config\WebConfig.class
+com\devconnect\project\service\ProjectService.class
+com\devconnect\project\controller\ProjectController.class
+com\devconnect\project\service\ProjectServiceImpl.class
+com\devconnect\project\dto\ProjectDTO.class
+com\devconnect\project\repository\ProjectRepository.class
+com\devconnect\project\model\Project$ProjectBuilder.class
+com\devconnect\project\model\Project.class

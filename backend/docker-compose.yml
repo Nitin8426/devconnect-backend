@@ -1,0 +1,96 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:14
+    container_name: devconnect-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: devconnect
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  auth-service:
+    build:
+      context: ./auth-service
+    container_name: auth-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+
+  workspace-service:
+    build:
+      context: ./workspace-service
+    container_name: workspace-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+
+  issue-service:
+    build:
+      context: ./issue-service
+    container_name: issue-service
+    ports:
+      - "8083:8083"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+
+  chat-service:
+    build:
+      context: ./chat-service
+    container_name: chat-service
+    ports:
+      - "8084:8084"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+
+  notification-service:
+    build:
+      context: ./notification-service
+    container_name: notification-service
+    ports:
+      - "8085:8085"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+
+  kanban-service:
+    build:
+      context: ./kanban-service
+    container_name: kanban-service
+    ports:
+      - "8086:8086"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+
+  task-service:
+    build:
+      context: ./backend/task-service
+    container_name: task-service
+    ports:
+      - "8087:8087"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/devconnect
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+
+volumes:
+  postgres_data:

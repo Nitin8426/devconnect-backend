@@ -1,0 +1,10 @@
+com\devconnect\collab\controller\CollabController.class
+com\devconnect\collab\config\WebConfig.class
+com\devconnect\collab\dto\CollabSessionDTO.class
+com\devconnect\collab\repository\CollabSessionRepository.class
+com\devconnect\collab\service\impl\CollabServiceImpl.class
+com\devconnect\collab\model\CollabSession.class
+com\devconnect\collab\service\CollabService.class
+com\devconnect\collab\CollaborationServiceApplication.class
+com\devconnect\collab\model\CollabSession$CollabSessionBuilder.class
+com\devconnect\collab\dto\CollabSessionDTO$CollabSessionDTOBuilder.class
